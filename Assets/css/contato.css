@@ -1,0 +1,86 @@
+h4{
+    letter-spacing: 3px;
+    font-size: 2em;
+}
+#contato p{
+    margin: 10px;
+    
+}
+
+#contato{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; 
+    height: 100vh;
+            
+}
+
+.contact-form-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+label {
+    display: block;
+    font-size: 1rem;
+    margin-bottom: 8px;
+    color: #333;
+}
+
+#contato input, textarea {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+#contato button {
+    width: 100%;
+    padding: 12px;
+    background-color: #000000;
+    color: rgb(255, 255, 255);
+    font-size: 1.2rem;
+    border: 2px solid black;
+    border-radius: 5%;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#contato button:hover {
+    background-color: rgb(255, 255, 255);
+    color: #000000;
+}
+
+.form-feedback {
+    text-align: center;
+    margin-top: 20px;
+    color: #28a745;
+    display: none;
+}
+
+.form-feedback.error {
+    color: #dc3545;
+}

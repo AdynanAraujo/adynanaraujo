@@ -11,7 +11,11 @@
 }
 
 #msg {
-  color: gray;
+  color: rgb(4, 31, 82);
+}
+#certificados ul li a { 
+  text-decoration: none;
+  color: #fff;
 }
 
 #btn {
@@ -21,6 +25,7 @@
   border-radius: 5%;
   color: white;
   background-color: black;
+ 
 }
 
 #btn:hover {
@@ -40,7 +45,7 @@
 }
 
 .notFoundResult {
-  color: gray;
+  color: rgb(4, 31, 82);
 }
 
 #resultado span a {
@@ -55,5 +60,5 @@
 #resultado span a:hover {
   display: flex;
   border-bottom: none;
-  color: gray;
+  color: rgb(4, 31, 82);
 }

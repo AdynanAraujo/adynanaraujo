@@ -4,9 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="Assets/css/style.css">
     <link rel="stylesheet" href="Assets/css/home.css">
     <link rel="stylesheet" href="Assets/css/certificados.css">
+    <link rel="stylesheet" href="Assets/css/contato.css">
     <link rel="icon" href="Assets/img/favicon.png" type="img/png"> 
     <title>Adynan Araújo</title>
 
@@ -31,25 +33,52 @@
 
             <ul id="menu">
 
-
                 <li>
                     <a href="#certificados">Certificados</a>
                 </li>
+                <li>
+                    <a href="#contato">Contato</a>
+                </li>
                 <!-- <li>
                         <a href="#"></a>
-                    </li>   -->
+                </li>   -->
             </ul>
 
     </nav>
 
     <div class="section" id="home">
-        <h4>Seja Bem-vindo(a)</h4>
+         <h4>Seja Bem-vindo(a) 👋 </h4>
+         <span id="msg"></span>
+    </div>
+    <div class="section" id="contato">
+       
+           <div class="contact-form-container">
+        <h2>Entre em Contato 📨</h2>
+       <form action="https://formspree.io/f/mwpkdklj" method="POST" >
+    <label for="name">Nome:</label>
+    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+    <label for="email">E-mail:</label>
+    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+    <label for="subject">Assunto:</label>
+    <input type="text" id="subject" name="subject" placeholder="Assunto (opcional)">
+
+    <label for="message">Mensagem:</label>
+    <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+
+    <button type="submit">Enviar</button>
+</form>
+
+        <div class="form-feedback" id="form-feedback"></div>
+    </div>
+
+ 
     </div>
     <div class="section" id="certificados">
         <ul>
             <ul id="title">Aqui estão alguns dos meus certificados...</ul>
             <li id="msg">*Clique para ser redirecionado*</li>
-
             <li><input type="text" id="buscarCertificados" placeholder="Buscar Certificados"></li>
             <li id="resultado">
                 <span id="dados"></span>
@@ -58,8 +87,6 @@
 
         </ul>
     </div>
-
-
     <footer>
         <div>
             <a href="https://www.linkedin.com/in/adynanaraujo/" target="_blank">
@@ -70,15 +97,16 @@
                         d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z" />
                 </svg>
             </a>
-
         </div>
-        <div><p>Desenvolvimento de sistemas</p></div>
+        <div><p>Desenvolvimento de Sistemas</p></div>
         <!-- <div id="curriculo">Currículo <a href="#">Acesse aqui</a>
         </div> -->
     </footer>
 
     <script src="Assets/js/script.js"></script>
     <script type="module" src="Assets/js/certificados.js"></script>
+    <script type="module" src="Assets/js/msg.js"></script>
+    <script type="module" src="Assets/js/contato.js"></script>
 </body>
 
 </html>

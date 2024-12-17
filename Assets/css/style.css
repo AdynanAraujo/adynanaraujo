@@ -5,25 +5,36 @@
     list-style: none;
     border: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 
-html, body{
+html{
     overflow-x: hidden;
-    scroll-behavior: smooth;
+    scroll-behavior: smooth; 
+}
+
+body{
+    
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+   
+    background: linear-gradient(120deg, #445d8b 25%, #667580 50%, #43494e 75%);
+    background-attachment: fixed;
+    background-size: cover;
+    color: #ffffff;
 }
 
 nav {
     position: fixed;
     top: 0;
-    width: 90vw;
+    width: 100vw;
     justify-content: center;
-    background-color: rgb(255, 255, 255);
+    background-color: #ffffffd7;
     letter-spacing: 1px;
-   
+    padding: 0 30px 0 30px ;
+    
 }
 
 ul {
@@ -33,6 +44,7 @@ ul {
     list-style: none;
     text-align: center;
     margin: 10px;
+    
 }
 
 ul li a { 
@@ -108,18 +120,14 @@ footer div{
 }
 
 
-#curriculo{
+/* #curriculo{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
    
-}
+} */
 
-#curriculo a{
-    text-decoration: none;
-    color: gray;
-}
 
 @media (max-width: 720px) {
    
@@ -163,3 +171,6 @@ footer div{
         display: none;
     }
 }
+
+
+
