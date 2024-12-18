@@ -3,12 +3,12 @@
     "name": "Adynan Araújo",
     "icons": [
         {
-            "src": "./Assets/img/mobile.png",
+            "src": "/Assets/img/mobile.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "./Assets/img/mobile.png",
+            "src": "/Assets/img/mobile.png",
             "sizes": "512x512",
             "type": "image/png"
         }
