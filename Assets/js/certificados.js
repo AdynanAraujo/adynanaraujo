@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('buscarCertificados').addEventListener('input', function() {
         const query = this.value.toLowerCase();
-        filtro = data.filter(item => item.nome.toLowerCase().includes(query));
+        filtro = data.filter(item => item.certificado.toLowerCase().includes(query));
         indice = 0;
         document.getElementById('dados').innerHTML = '';
         displayResults();
@@ -32,7 +32,7 @@ function displayResults() {
         
         const dados = document.createElement('a');
         
-        dados.textContent = `${item.nome}`;
+        dados.textContent = `${item.certificado}`;
         dados.href = item.link;
         dados.target = '_blank';
         dados.style.marginBottom = '20px'; 
