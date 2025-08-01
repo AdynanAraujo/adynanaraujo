@@ -1,0 +1,157 @@
+body.flash {
+  animation: flashRed 0.3s alternate infinite;
+  padding: 40px;
+  background: #0d0d0d;
+  font-family: 'Hack', monospace;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  color: #fff;
+  overflow: hidden;
+  transition: background 0.2s;
+}
+
+#container {
+  height: 40vh;
+  background: #0d0d0d;
+  border-radius: 16px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.9),
+    inset 0 0 30px rgba(255, 255, 255, 0.05);
+  padding: 56px;
+  box-sizing: border-box;
+  position: relative;
+
+  transition: transform 0.1s;
+  width: 100% ;
+  max-width: 500px;
+  margin-bottom: 20px;
+
+
+}
+
+#container.shake {
+  animation: shake 0.3s infinite;
+
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg);
+  }
+
+  25% {
+    transform: translate(-2px, 1px) rotate(-0.5deg);
+  }
+
+  50% {
+    transform: translate(2px, -1px) rotate(0.5deg);
+  }
+
+  75% {
+    transform: translate(-1px, 2px) rotate(0deg);
+  }
+
+  100% {
+    transform: translate(1px, -2px) rotate(-0.5deg);
+  }
+}
+
+#window-buttons {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.btn-circle {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  display: inline-block;
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0.6);
+}
+
+
+.btn-close {
+  background: #ff5f56;
+}
+
+.btn-minimize {
+  background: #ffbd2e;
+}
+
+.btn-maximize {
+  background: #27c93f;
+}
+
+textarea#editor {
+  width: 100%;
+  height: 400px;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-family: 'Hack', monospace;
+  font-size: 16px;
+  line-height: 28px;
+  padding: 0;
+  resize: none;
+  caret-color: #ffffff;
+  white-space: pre-wrap;
+  overflow-y: auto;
+
+  position: relative;
+}
+
+textarea#editor::placeholder {
+  color: #6a9955;
+  opacity: 1;
+}
+
+.bug {
+  position: fixed;
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/favicon.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+  z-index: 9999;
+  animation: chaoticMove 3s infinite linear;
+}
+
+@keyframes chaoticMove {
+  0% {
+    transform: translate(0px, 0px) rotate(0deg) scale(1);
+  }
+
+  25% {
+    transform: translate(-100px, 80px) rotate(90deg) scale(1.2);
+  }
+
+  50% {
+    transform: translate(200px, -100px) rotate(180deg) scale(0.8);
+  }
+
+  75% {
+    transform: translate(-150px, 150px) rotate(270deg) scale(1.3);
+  }
+
+  100% {
+    transform: translate(0px, 0px) rotate(360deg) scale(1);
+  }
+}
+
+@keyframes flashRed {
+
+  0%,
+  100% {
+    background-color: #0d0d0d;
+  }
+
+  50% {
+    background-color: #330000;
+  }
+}

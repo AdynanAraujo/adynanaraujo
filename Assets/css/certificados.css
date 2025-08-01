@@ -1,31 +1,40 @@
 #certificados {
   display: flex;
+  align-items: center;
+  
 }
 
 #certificados ul {
   flex-direction: column;
+  box-shadow: var(--box-shadow);
+  padding: 10px;
+   border-radius: var(--border-radius);
 }
 
-#title {
+ul #title {
   font-size: 20px;
+  box-shadow: none;
 }
 
 #msg {
-  color: rgb(4, 31, 82);
+  color: rgb(255, 255, 255);
 }
-#certificados ul li a { 
+
+#certificados ul li a {
   text-decoration: none;
   color: #fff;
 }
 
 #btn {
-  width: 100px;
+  width: 150px;
   height: 50px;
-  border: 2px solid black;
-  border-radius: 5%;
+  color: rgb(255, 255, 255);
+  font-size: 1.05rem;
+  border: 2px solid  #16927c;
+  border-radius: 4px;
   color: white;
-  background-color: black;
- 
+  background-color: #16927c;
+
 }
 
 #btn:hover {
@@ -40,21 +49,18 @@
 }
 
 #resultado {
-  width: auto;
-  min-height: 400px;
+  max-width: 400px;
+  text-align: left;
+  word-break: break-word;
 }
 
 .notFoundResult {
-  color: rgb(4, 31, 82);
+  color: rgb(255, 0, 0);
 }
 
 #resultado span a {
   display: flex;
   border-bottom: none;
-  text-align: left;
-  flex-wrap: wrap;
-  min-width: 200px;
-  max-width: 30vw;
 }
 
 #resultado span a:hover {

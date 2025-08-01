@@ -3,14 +3,14 @@ document.querySelector('form').addEventListener('submit', function (event) {
 
     fetch(this.action, {
         method: this.method,
-         body: new FormData(this),
+        body: new FormData(this),
         headers: {
             'Accept': 'application/json'
         }
     }).then(response => {
-         if (response.ok) {
+        if (response.ok) {
             alert('Obrigado, mesagem enviada com sucesso!');
-            this.reset(); 
+            this.reset();
         } else {
             alert('Ops... Algo deu errado ao enviar a mensagem!');
         }

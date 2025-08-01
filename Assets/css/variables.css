@@ -1,0 +1,9 @@
+:root {
+  --background: radial-gradient(ellipse at center, #16927c 0%, #1c67f2 100%);
+  --box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  --border-radius: 12px;
+  /* --font-title-size-lg: 2.5rem;   
+  --font-title-size-md: 1.75rem;  
+  --font-title-size-sm: 1.25rem;  
+*/
+}

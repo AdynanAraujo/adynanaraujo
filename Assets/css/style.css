@@ -8,22 +8,80 @@
     font-family: 'Roboto', sans-serif;
 }
 
-html{
+html {
     overflow-x: hidden;
-    scroll-behavior: smooth; 
+    scroll-behavior: smooth;
 }
 
-body{
-    
+/* #skills {
+    margin: 20px;
+} */
+
+body {
+
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-   
-    background: linear-gradient(120deg, #445d8b 25%, #667580 50%, #43494e 75%);
+
+    /* background: linear-gradient(-45deg, #1e1e2f, #3a3a5c, #2d2d44, #1b1b2b);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite; */
+    /* background: #3b3bc6; */
+
+    background:var(--background);
+    overflow: hidden;
     background-attachment: fixed;
     background-size: cover;
     color: #ffffff;
+}
+
+/* #contato-whatsapp{
+    display: flex;
+    background-color: #198754fc;
+    width: auto;
+    height: 50px;
+    align-items: center;
+    padding: 10px;
+    justify-content: center;
+    border-radius: 12px;
+    
+}
+
+#contato-whatsapp a {
+    text-decoration: none; 
+    color: inherit;
+}
+
+#contato-whatsapp svg {
+    width:  30px;
+    height: 30px;
+} */
+
+body.dark-mode {
+    background: #121212;
+    color: #e0e0e0;
+}
+
+
+#darkModeToggle {
+    position: fixed;
+    bottom: 120px;
+    right: 20px;
+    padding: 10px 16px;
+    border: none;
+    border-radius:var(--border-radius);
+    background-color: #333;
+    color: white;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+
+body:not(.dark-mode) #darkModeToggle {
+    background-color:  #ffffff00;
+    color: #000;
 }
 
 nav {
@@ -33,9 +91,11 @@ nav {
     justify-content: center;
     background-color: #ffffffd7;
     letter-spacing: 1px;
-    padding: 0 30px 0 30px ;
-    
+    padding: 0 30px;
+    z-index: 11000000;
+    /* Para ficar acima da barra do Google Translate que usa z-index alto também*/
 }
+
 
 ul {
     display: flex;
@@ -44,17 +104,17 @@ ul {
     list-style: none;
     text-align: center;
     margin: 10px;
-    
+
 }
 
-ul li a { 
-     text-decoration: none;
-     color: black;
+ul li a {
+    text-decoration: none;
+    color: black;
 }
 
-nav ul li a:hover {  
+nav ul li a:hover {
     border-bottom: 1px solid black;
-    
+
 }
 
 .section {
@@ -62,9 +122,9 @@ nav ul li a:hover {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    padding-top: 15vh; 
+    padding-top: 15vh;
     scroll-behavior: smooth;
-  
+
 }
 
 #menu_icon {
@@ -72,18 +132,19 @@ nav ul li a:hover {
     position: fixed;
 
 }
-#icon img{
+
+#icon img {
     width: 50px;
 }
 
-#icon a{
+#icon a {
     border: none;
 }
 
 ul#menu {
     display: flex;
     flex-direction: row;
-    
+
 }
 
 #icon {
@@ -106,20 +167,27 @@ footer {
     display: flex;
     width: 100vw;
     height: 30vh;
-    margin: 0 auto;
-    padding: 20px;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     background-color: #ffffffd7;
     color: #000;
+
+}
+
+footer div {
+    margin-bottom: 12px;
+}
+
+footer a {
     
+    text-decoration: none; 
+    color: inherit;
 }
 
-footer div{
-    margin: 10px;
+footer svg{
+    margin: 4px;
 }
-
 
 /* #curriculo{
     display: flex;
@@ -130,8 +198,8 @@ footer div{
 } */
 
 
-@media (max-width: 720px) {
-   
+@media (max-width: 740px) {
+
     ul#menu {
         display: none;
         flex-direction: column;
@@ -141,7 +209,7 @@ footer div{
         display: flex;
         left: 20px;
     }
-   
+
     ul {
         display: flex;
         align-items: center;
@@ -172,6 +240,3 @@ footer div{
         display: none;
     }
 }
-
-
-

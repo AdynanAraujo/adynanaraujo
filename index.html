@@ -5,19 +5,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Assets/css/tradutor.css">
     <link rel="stylesheet" href="Assets/css/style.css">
     <link rel="stylesheet" href="Assets/css/home.css">
     <link rel="stylesheet" href="Assets/css/certificados.css">
     <link rel="stylesheet" href="Assets/css/contato.css">
-    <link rel="icon" href="Assets/img/favicon.png" type="img/png"> 
+    <link rel="stylesheet" href="Assets/css/faq.css">
+    <link rel="stylesheet" href="Assets/css/sobreMim.css">
+    <link rel="stylesheet" href="Assets/css/terminal.css">
+    <link rel="stylesheet" href="Assets/css/plus.css">
+    <link rel="stylesheet" href="Assets/css/variables.css">
+    <link rel="icon" href="Assets/img/favicon.png" type="img/png">
     <link rel="manifest" href="Assets/manifest.json">
     <title>Adynan Araújo</title>
-
 </head>
 
 <body>
 
-    <nav>
+    <nav id="main-nav">
         <ul id="menu_icon">
             <li id="burger_menu"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960"
                     width="24px" fill="#5f6368">
@@ -35,51 +40,50 @@
             <ul id="menu">
 
                 <li>
+                    <a href="#sobreMim">Sobre mim</a>
+                </li>
+                <li>
                     <a href="#certificados">Certificados</a>
+                </li>
+                <li>
+                    <a href="#faq">Perguntas e Respostas</a>
                 </li>
                 <li>
                     <a href="#contato">Contato</a>
                 </li>
-                <!-- <li>
-                        <a href="#"></a>
-                </li>   -->
+                <li>
+                    <a translate="no" href="#plus">Plus</a>
+                </li>
+
             </ul>
 
     </nav>
-
+    <button id="darkModeToggle">🌙</button>
     <div class="section" id="home">
-         <h4>Seja Bem-vindo(a) 👋 </h4>
-         <span id="msg"></span>
+        <h4 id="typewriter"></h4>
+        <div id="language-toggle">
+            🌐
+            <div id="google_translate_element" class="hidden"></div>
+        </div>
+        <span id="msg"></span>
     </div>
-    <div class="section" id="contato">
-       
-           <div class="contact-form-container">
-        <h2>Entre em Contato 📨</h2>
-       <form action="https://formspree.io/f/mwpkdklj" method="POST" >
-    <label for="name">Nome:</label>
-    <input type="text" id="name" name="name" placeholder="Seu nome" required>
+    <div class="section" id="sobreMim">
+        <div class="profile-container">
+            <img alt="Foto de perfil" class="profile-pic" id="profile-pic" />
+            <div class="profile-name" id="profile-name"></div>
+            <div class="profile-description" id="profile-description">
+            </div>
+        </div>
 
-    <label for="email">E-mail:</label>
-    <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
-
-    <label for="subject">Assunto:</label>
-    <input type="text" id="subject" name="subject" placeholder="Assunto (opcional)">
-
-    <label for="message">Mensagem:</label>
-    <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
-
-    <button type="submit">Enviar</button>
-</form>
-
-        <div class="form-feedback" id="form-feedback"></div>
     </div>
-
- 
+    <span id="msg"></span>
     </div>
     <div class="section" id="certificados">
         <ul>
-            <ul id="title">Aqui estão alguns dos meus certificados...</ul>
-            <li id="msg">*Clique para ser redirecionado*</li>
+            <ul id="title">
+                <h3>Aqui estão alguns dos meus certificados...</h3>
+            </ul>
+            <li id="msg">ℹ️ Clique para ser redirecionado </li>
             <li><input type="text" id="buscarCertificados" placeholder="Buscar Certificados"></li>
             <li id="resultado">
                 <span id="dados"></span>
@@ -88,26 +92,99 @@
 
         </ul>
     </div>
+    <div class="section" id="faq">
+        <div class="faq-container">
+            <h2>Algumas perguntas e respostas...</h2>
+            <div id="faq-list"></div>
+        </div>
+    </div>
+    <div class="section" id="contato">
+
+        <div class="contact-form-container">
+            <h2>Entre em Contato </h2>
+            <form action="https://formspree.io/f/mwpkdklj" method="POST">
+                <label for="name">Nome:</label>
+                <input type="text" id="name" name="name" placeholder="Seu nome" required>
+
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+
+                <label for="subject">Assunto:</label>
+                <input type="text" id="subject" name="subject" placeholder="Assunto (opcional)">
+
+                <label for="message">Mensagem:</label>
+                <textarea id="message" name="message" placeholder="Sua mensagem" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="form-feedback" id="form-feedback"></div>
+        </div>
+        <!-- <div id="contato-whatsapp">
+            <a href=""><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                    class="bi bi-whatsapp" viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg></a>
+        </div> -->
+
+    </div>
+
+    <div class="section" id="plus">
+        <iframe id="editorCodigo" src="" position=" fixed"
+            style="width:100%; height: 650px; border:0; border-radius:4px; overflow:hidden; display: none;"></iframe>
+
+        <div id="container">
+            <div id="window-buttons">
+                <span class="btn-circle btn-close"></span>
+                <span class="btn-circle btn-minimize"></span>
+                <span class="btn-circle btn-maximize"></span>
+            </div>
+
+
+            <div id="output" style="white-space: pre-wrap;"></div>
+
+            <textarea id="editor" spellcheck="false"
+                placeholder="// Digite um comando no terminal (tente 'code now python' ou 'help' para ver os comandos disponíveis)"></textarea>
+        </div>
+
+    </div>
+
     <footer>
         <div>
             <a href="https://www.linkedin.com/in/adynanaraujo/" target="_blank">
-                <?xml version="1.0" ?><svg width="30px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
+                <?xml version="1.0" ?><svg width="25px" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128">
                     <path fill="#0076b2"
                         d="M116 3H12a8.91 8.91 0 00-9 8.8v104.42a8.91 8.91 0 009 8.78h104a8.93 8.93 0 009-8.81V11.77A8.93 8.93 0 00116 3z" />
                     <path fill="#fff"
                         d="M21.06 48.73h18.11V107H21.06zm9.06-29a10.5 10.5 0 11-10.5 10.49 10.5 10.5 0 0110.5-10.49M50.53 48.73h17.36v8h.24c2.42-4.58 8.32-9.41 17.13-9.41C103.6 47.28 107 59.35 107 75v32H88.89V78.65c0-6.75-.12-15.44-9.41-15.44s-10.87 7.36-10.87 15V107H50.53z" />
                 </svg>
             </a>
+            <a href="https://github.com/AdynanAraujo" target="_blank">
+                <svg width="25px" role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <title>GitHub</title>
+                    <path
+                        d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12" />
+                </svg>
+            </a>
         </div>
-        <div><p>Desenvolvimento de Sistemas</p></div>
+        <!-- <div>
+            <p>Desenvolvimento de Sistemas</p>
+        </div> -->
         <!-- <div id="curriculo">Currículo <a href="#">Acesse aqui</a>
         </div> -->
     </footer>
 
     <script src="Assets/js/script.js"></script>
+    <script src="Assets/js/tradutor.js"></script>
+    <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
     <script type="module" src="Assets/js/certificados.js"></script>
     <script type="module" src="Assets/js/msg.js"></script>
     <script type="module" src="Assets/js/contato.js"></script>
+    <script type="module" src="Assets/js/faq.js"></script>
+    <script type="module" src="Assets/js/sobreMim.js"></script>
+    <script type="module" src="Assets/js/terminal.js"></script>
+    <script type="module" src="Assets/js/home.js"></script>
 </body>
 
 </html>

@@ -1,0 +1,37 @@
+.faq-container {
+
+  position: relative;
+  margin: auto;
+  max-width: 500px;
+  text-align: left;
+  word-break: break-word;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: var(--box-shadow);
+}
+
+.faq {
+  margin: 15px;
+}
+
+.question {
+  background-color: #0077cc;
+  color: rgb(255, 255, 255);
+  padding: 15px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.question:hover {
+  background-color: #005fa3;
+}
+
+.answer {
+  padding: 15px;
+  display: none;
+  background-color: #005fa3;
+  border-left: 3px solid #0077cc;
+  margin-top: 5px;
+  border-radius: 5px;
+}
